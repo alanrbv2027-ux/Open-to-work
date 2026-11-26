@@ -1,0 +1,301 @@
+/* ==================================================
+   CORES EDITÁVEIS
+   ==================================================
+   Para mudar as cores do site, altere apenas os valores
+   depois de cada nome em --cor...
+*/
+
+:root {
+  --cor-fundo: #eef3f8;
+  --cor-card: #ffffff;
+  --cor-texto: #1f2937;
+  --cor-secundaria: #64748b;
+  --cor-destaque: #3155a6;
+  --cor-destaque-clara: #edf3ff;
+  --cor-borda: #dbe2ea;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  background:
+    radial-gradient(circle at top, #ffffff 0, #eef3f8 45%, #e4ebf3 100%);
+  color: var(--cor-texto);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+p,
+figure {
+  margin-top: 0;
+}
+
+.pagina {
+  width: min(100% - 32px, 760px);
+  margin: 48px auto;
+}
+
+/* ==================================================
+   CARD PRINCIPAL
+   ==================================================
+   border: cria uma linha ao redor do card.
+   border-radius: arredonda os cantos.
+   box-shadow: cria a sombra ao redor do card.
+*/
+
+.card {
+  padding: 32px;
+  background: var(--cor-card);
+  border: 1px solid var(--cor-borda);
+  border-radius: 22px;
+  box-shadow: 0 18px 45px rgb(41 52 73 / 14%);
+}
+
+/* ==================================================
+   CABEÇALHO E FOTO
+   ==================================================
+*/
+
+.card__cabecalho {
+  text-align: center;
+}
+
+.perfil {
+  margin: 0 0 18px;
+}
+
+.perfil__foto {
+  display: block;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 10px;
+
+  /* 50% transforma um quadrado em círculo */
+  border-radius: 50%;
+
+  /* Remove deformações ao recortar a foto */
+  object-fit: cover;
+
+  /* Editável: altere 4px para aumentar ou diminuir a borda */
+  border: 4px solid #ffffff;
+
+  /* Sombra específica da foto */
+  box-shadow: 0 8px 22px rgb(49 85 166 / 20%);
+}
+
+.perfil figcaption {
+  color: var(--cor-secundaria);
+  font-size: 0.9rem;
+}
+
+.card__cabecalho h1 {
+  margin-bottom: 4px;
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+}
+
+.profissao {
+  margin-bottom: 14px;
+  color: var(--cor-destaque);
+  font-weight: 700;
+}
+
+.bio {
+  max-width: 560px;
+  margin: 0 auto;
+  color: var(--cor-secundaria);
+}
+
+/* ==================================================
+   SEÇÕES
+   ==================================================
+*/
+
+.secao {
+  margin-top: 34px;
+  padding: 22px;
+  background: #fbfdff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+}
+
+.secao h2,
+.card__rodape h2 {
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 2px solid var(--cor-destaque-clara);
+  font-size: 1.25rem;
+}
+
+/* ==================================================
+   HABILIDADES
+   ==================================================
+*/
+
+.lista-habilidades {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lista-habilidades li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: var(--cor-destaque-clara);
+  border: 1px solid #dae5fa;
+  border-radius: 10px;
+}
+
+.nivel {
+  color: var(--cor-secundaria);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+/* ==================================================
+   PROJETOS
+   ==================================================
+*/
+
+.projetos {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.projeto {
+  min-height: 170px;
+  padding: 18px;
+  background: #ffffff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  box-shadow: 0 7px 18px rgb(41 52 73 / 8%);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+/* hover: efeito aplicado ao passar o mouse sobre o projeto */
+.projeto:hover {
+  border-color: #aebfe2;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgb(49 85 166 / 16%);
+}
+
+.projeto h3 {
+  margin-bottom: 8px;
+  color: var(--cor-destaque);
+}
+
+.projeto p {
+  margin-bottom: 8px;
+  color: var(--cor-secundaria);
+}
+
+.tecnologias {
+  margin-bottom: 0 !important;
+  font-size: 0.9rem;
+}
+
+/* ==================================================
+   CONTATO E LINKS
+   ==================================================
+*/
+
+.card__rodape {
+  margin-top: 34px;
+  padding: 22px;
+  background: #fbfdff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 16px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.links a {
+  display: inline-block;
+  min-width: 92px;
+  padding: 9px 16px;
+  background: #ffffff;
+  color: var(--cor-destaque);
+  border: 1px solid var(--cor-destaque);
+  border-radius: 999px;
+  text-align: center;
+  text-decoration: none;
+  transition:
+    background-color 180ms ease,
+    color 180ms ease,
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+/* hover: efeito aplicado ao passar o mouse sobre o link */
+.links a:hover {
+  background: var(--cor-destaque);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 7px 16px rgb(49 85 166 / 22%);
+}
+
+.links a:focus-visible {
+  outline: 3px solid #f59e0b;
+  outline-offset: 3px;
+}
+
+/* ==================================================
+   RESPONSIVIDADE
+   ==================================================
+*/
+
+@media (max-width: 560px) {
+  .pagina {
+    width: min(100% - 24px, 760px);
+    margin: 24px auto;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .secao,
+  .card__rodape {
+    padding: 16px;
+  }
+
+  .lista-habilidades,
+  .projetos {
+    grid-template-columns: 1fr;
+  }
+
+  .perfil__foto {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .projeto,
+  .links a {
+    transition: none;
+  }
+}

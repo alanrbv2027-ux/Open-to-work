@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- EDITAR: coloque aqui o título que aparece na aba do navegador -->
+  <title>Meu portfólio</title>
+
+  <link rel="stylesheet" href="style12.css">
+</head>
+<body>
+  <main class="pagina">
+    <article class="card">
+      <header class="card__cabecalho">
+        <figure class="perfil">
+          <!-- EDITAR: substitua o endereço em src pela sua foto.
+               Exemplo: src="imagens/minha-foto.jpg" -->
+          <img
+            class="perfil__foto"
+            src="https://i.pravatar.cc/300?img=12"
+            alt="Foto de perfil de Seu Nome"
+          >
+
+          <!-- EDITAR: escreva uma legenda para sua foto -->
+          <figcaption>Meu perfil profissional</figcaption>
+        </figure>
+
+        <!-- EDITAR: troque nome, profissão e biografia pelos seus dados -->
+        <h1>Alan Ribeiro</h1>
+        <p class="profissao">Engenheiro</p>
+        <p class="bio">
+          Interesse em harming e embebbed systems, codificação de firmware, Design de máquinas.
+        </p>
+      </header>
+
+      <section class="secao" aria-labelledby="habilidades-titulo">
+        <h2 id="habilidades-titulo">Habilidades técnicas</h2>
+
+        <!-- EDITAR: troque as habilidades e os níveis.
+             Use uma lista não ordenada porque a ordem dos itens não importa. -->
+        <ul class="lista-habilidades">
+          <li><span>HTML</span><span class="nivel">Intermediário</span></li>
+          <li><span>CSS</span><span class="nivel">Básico</span></li>
+          <li><span>JavaScript</span><span class="nivel">Básico</span></li>
+          <li><span>Git e GitHub</span><span class="nivel">Intermediário</span></li>
+        </ul>
+      </section>
+
+      <section class="secao" aria-labelledby="projetos-titulo">
+        <h2 id="projetos-titulo">Projetos destacados</h2>
+
+        <div class="projetos">
+          <article class="projeto">
+            <!-- EDITAR: informe o título, a descrição e as tecnologias do projeto -->
+            <h3>Web input text</h3>
+            <p>Esse projeto é o ínicio de uma jornada aprendendo os fundamentos de front.</p>
+            <p class="tecnologias"><strong>Tecnologias:</strong> HTML, CSS</p>
+          </article>
+
+          <article class="projeto">
+            <!-- EDITAR: informe os dados do seu segundo projeto -->
+            <h3>Web interactive portifólio</h3>
+            <p>Nesse projeto apliquei ferramentas de interatividade
+              como hover, display, transition e transform.</p>
+            <p class="tecnologias"><strong>Tecnologias:</strong> HTML, CSS, Git</p>
+          </article>
+        </div>
+      </section>
+
+      <footer class="card__rodape">
+        <h2>Contato</h2>
+
+        <!-- EDITAR: substitua # pelos endereços dos seus perfis.
+             Exemplo: href="https://github.com/seu-usuario" -->
+        <nav aria-label="Redes sociais">
+          <ul class="links">
+            <li><a href="https://github.com/alanrbv2027-ux" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/alan-ribeiro-6aa417268?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="alanrbv2027@gmail.com">alanrbv2027@gmail.com</a></li>
+          </ul>
+        </nav>
+      </footer>
+    </article>
+  </main>
+</body>
+</html>
